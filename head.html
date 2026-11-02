@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H SMP - In Memoriam (Permanent Closure)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0369a1',
+                            glow: '#38bdf8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Rajdhani', 'sans-serif'],
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '1', filter: 'drop-shadow(0 0 25px rgba(56, 189, 248, 0.8))' },
+                            '50%': { opacity: '0.6', filter: 'drop-shadow(0 0 10px rgba(56, 189, 248, 0.3))' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Orbitron & Rajdhani -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #07090e;
+            color: #f1f5f9;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.03em;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.18);
+        }
+        .glass-panel:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        .font-gaming {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Starfield Canvas -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Header / Navigation Banner -->
+    <header class="relative z-10 w-full border-b border-slate-800/80 bg-slate-950/40 backdrop-blur-md py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-brand-500/30 flex items-center justify-center overflow-hidden shadow-lg shadow-brand-500/10">
+                <img src="H ol.jpg" alt="H SMP Logo" class="w-7 h-7 object-contain animate-pulse-glow" onerror="this.src='https://placehold.co/100x100/030712/38bdf8?text=H'">
+            </div>
+            <span class="font-gaming font-bold text-xl tracking-wider text-slate-100">H SMP <span class="text-brand-500 text-xs font-semibold uppercase px-2 py-0.5 rounded bg-brand-500/10 border border-brand-500/20 ml-2">Memorial</span></span>
+        </div>
+        <div class="text-xs md:text-sm text-slate-300 font-semibold tracking-wider">
+            <i class="fa-regular fa-clock text-brand-500 mr-1.5"></i> PERMANENTLY CLOSED • 2021 – 2026
+        </div>
+    </header>
+
+    <!-- Main Hero & Memorial Content -->
+    <main class="relative z-10 flex-grow max-w-5xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center text-center">
+        
+        <!-- Glowing Logo Showcase -->
+        <div class="mb-8 relative animate-float">
+            <div class="absolute -inset-6 rounded-full bg-brand-500/20 blur-2xl opacity-75"></div>
+            <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-3xl glass-panel flex items-center justify-center p-4 shadow-2xl">
+                <img src="H ol.jpg" alt="H SMP Logo" class="w-24 h-24 md:w-32 md:h-32 object-contain animate-pulse-glow" onerror="this.src='https://placehold.co/200x200/030712/38bdf8?text=H'">
+            </div>
+        </div>
+
+        <!-- Headline -->
+        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold mb-6 tracking-widest uppercase font-gaming">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            <span>Server Shutdown Official Notice</span>
+        </div>
+
+        <h1 class="hero-title text-4xl md:text-6xl font-black text-white mb-6 uppercase drop-shadow-md">
+            An Era Has <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-indigo-400">Ended</span>
+        </h1>
+        
+        <p class="max-w-2xl text-slate-300 text-lg md:text-xl leading-relaxed mb-12 font-medium">
+            After years of epic builds, unforgettable community bonds, fierce wars, and boundless creativity, the gates of <strong class="text-white font-bold">H SMP</strong> have permanently closed. Thank you for making this world your home.
+        </p>
+
+        <!-- Solemn Final Message Banner -->
+        <div class="w-full glass-panel rounded-2xl p-8 md:p-10 mb-12 text-left relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <h2 class="font-gaming text-xl md:text-2xl font-bold text-slate-100 mb-4 flex items-center tracking-wide">
+                <i class="fa-solid fa-feather-pointed text-brand-400 mr-3"></i> A Letter from the Founders
+            </h2>
+            <div class="space-y-4 text-slate-300 text-base md:text-lg leading-relaxed font-medium">
+                <p>
+                    Every block placed, every fortress raised, and every friendship forged on H SMP was a testament to what a passionate community can achieve. When we first launched this server, we never imagined the sheer depth of memories and stories that would echo through its digital halls.
+                </p>
+                <p>
+                    Due to evolving technical landscapes, resource shifts, and the natural conclusion of our roadmap, we have made the difficult decision to close the server permanently. While the servers are offline, the legacy we built together remains timeless.
+                </p>
+                <p class="text-slate-400 italic text-sm pt-2 border-t border-slate-800">
+                    — The H SMP Administration & Development Team
+                </p>
+            </div>
+        </div>
+
+        <!-- Server Statistics Summary Grid -->
+        <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
+            <div class="glass-panel p-6 rounded-2xl text-center shadow-lg transition-transform hover:-translate-y-1">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="text-2xl md:text-3xl font-bold text-white font-gaming mb-1">142,850+</div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Total Players</div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl text-center shadow-lg transition-transform hover:-translate-y-1">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-hourglass-end"></i>
+                </div>
+                <div class="text-2xl md:text-3xl font-bold text-white font-gaming mb-1">1,825</div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Days Online</div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl text-center shadow-lg transition-transform hover:-translate-y-1">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="text-2xl md:text-3xl font-bold text-white font-gaming mb-1">48.2M</div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Blocks Placed</div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl text-center shadow-lg transition-transform hover:-translate-y-1">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="text-2xl md:text-3xl font-bold text-white font-gaming mb-1">Infinite</div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Memories Made</div>
+            </div>
+        </div>
+
+        <!-- Tribute Wall / Interactive Section -->
+        <div class="w-full glass-panel rounded-2xl p-8 mb-12 text-center shadow-2xl">
+            <h3 class="font-gaming text-xl font-bold text-white mb-2 tracking-wide">Leave Your Final Tribute</h3>
+            <p class="text-slate-300 text-base mb-6 font-medium">Click the eternal flame to record your respect for H SMP.</p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="lightCandle()" id="tributeBtn" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-bold font-gaming tracking-wider shadow-lg shadow-brand-500/25 transition-all flex items-center space-x-2.5 active:scale-95">
+                    <i class="fa-solid fa-fire text-amber-400 animate-bounce"></i>
+                    <span>LIGHT A TRIBUTE CANDLE</span>
+                </button>
+                <div class="px-6 py-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 text-sm font-semibold">
+                    TOTAL TRIBUTES: <span id="candleCount" class="font-bold text-brand-400 font-gaming">0</span>
+                </div>
+            </div>
+            <p id="tributeMessage" class="text-xs text-brand-400 font-bold tracking-wider mt-4 opacity-0 transition-opacity duration-500">THANK YOU. YOUR MEMORY HAS BEEN ETCHED INTO THE ETERNAL LOG.</p>
+        </div>
+
+        <!-- Epic Farewell Quote -->
+        <div class="max-w-xl text-center py-6">
+            <p class="font-gaming text-slate-400 text-sm tracking-widest italic uppercase">
+                "Not all worlds last forever, but the bonds forged within them transcend time."
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 w-full border-t border-slate-800/80 bg-slate-950/60 backdrop-blur-md py-6 px-6 text-center text-xs text-slate-400 font-medium tracking-wider">
+        <p>&copy; 2021 – 2026 H SMP COMMUNITY. ALL RIGHTS RESERVED. THANK YOU FOR THE INCREDIBLE JOURNEY.</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Starfield Canvas Animation
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initStars();
+        });
+
+        const starsCount = Math.floor((width * height) / 9000);
+        let stars = [];
+
+        function initStars() {
+            stars = [];
+            for (let i = 0; i < starsCount; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    size: Math.random() * 1.8 + 0.2,
+                    speed: Math.random() * 0.15 + 0.05,
+                    alpha: Math.random() * 0.7 + 0.3
+                });
+            }
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.fillStyle = '#ffffff';
+            
+            for (let star of stars) {
+                ctx.globalAlpha = star.alpha;
+                ctx.fillRect(star.x, star.y, star.size, star.size);
+                
+                star.y -= star.speed;
+                if (star.y < 0) {
+                    star.y = height;
+                    star.x = Math.random() * width;
+                }
+            }
+            requestAnimationFrame(animateStars);
+        }
+
+        initStars();
+        animateStars();
+
+        // Tribute Candle Interaction
+        let hasLit = false;
+
+        function renderTributeState(count, recorded = false) {
+            document.getElementById('candleCount').textContent = count.toLocaleString();
+            hasLit = recorded;
+
+            if (recorded) {
+                const btnElem = document.getElementById('tributeBtn');
+                const msgElem = document.getElementById('tributeMessage');
+                btnElem.disabled = true;
+                btnElem.innerHTML = '<i class="fa-solid fa-check text-green-400"></i><span>TRIBUTE RECORDED</span>';
+                btnElem.classList.remove('from-brand-600', 'to-indigo-600');
+                btnElem.classList.add('bg-slate-800', 'border', 'border-slate-700', 'cursor-default');
+                msgElem.style.opacity = '1';
+            }
+        }
+
+        async function loadTributes() {
+            try {
+                const response = await fetch('/api/tributes');
+                if (!response.ok) throw new Error('Unable to load tribute count');
+                const tribute = await response.json();
+                renderTributeState(tribute.count, tribute.recorded);
+            } catch (error) {
+                document.getElementById('candleCount').textContent = 'Unavailable';
+            }
+        }
+
+        async function lightCandle() {
+            if (hasLit) return;
+
+            const btnElem = document.getElementById('tributeBtn');
+            btnElem.disabled = true;
+
+            try {
+                const response = await fetch('/api/tributes', { method: 'POST' });
+                if (!response.ok) throw new Error('Unable to record tribute');
+                const tribute = await response.json();
+                renderTributeState(tribute.count, tribute.recorded);
+            } catch (error) {
+                btnElem.disabled = false;
+                document.getElementById('tributeMessage').textContent = 'Unable to record your tribute. Please try again.';
+                document.getElementById('tributeMessage').style.opacity = '1';
+            }
+        }
+
+        loadTributes();
+    </script>
+</body>
+</html>
